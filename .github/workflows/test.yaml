@@ -51,9 +51,9 @@ jobs:
       with:
        resource-group: ${{ env.RESOURCE_GROUP }}
        action: deploy
-       private-cluster: true
+       # private-cluster: true
        namespace: demo
        manifests: |
-         test.yaml
+         kubectl apply -f test.yaml
 
     
