@@ -51,6 +51,7 @@ jobs:
       with:
         action: deploy
         private-cluster: true
+        namespace: demo
         manifests: |
           test.yaml
 
