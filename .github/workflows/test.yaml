@@ -70,12 +70,19 @@ jobs:
         inlineScript: |
           az account show
           az storage -h
-    - uses: Azure/aks-set-context@v1
-      ### Set the target AKS cluster.
+
+    - name: Set up kubelogin for non-interactive login
+      uses: azure/use-kubelogin@v1
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-        cluster-name: ${{ env.CLUSTER_NAME }}
-        resource-group: ${{ env.RESOURSE_GROUP }}
+        kubelogin-version: 'v0.0.25'    
+
+     https://github.com/enformatique11/kubernetes-dep/new/main?filename=.github%2Fworkflows%2Fazure-kubernetes-service.yml&workflow_template=deployments%2Fazure-kubernetes-service     
+   # - uses: Azure/aks-set-context@v1
+   #    ### Set the target AKS cluster.
+   #  with:
+   #      creds: ${{ secrets.AZURE_CREDENTIALS }}
+   #      cluster-name: ${{ env.CLUSTER_NAME }}
+   #      resource-group: ${{ env.RESOURSE_GROUP }}
 
 
 
