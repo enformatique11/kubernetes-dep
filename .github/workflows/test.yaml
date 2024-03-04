@@ -52,7 +52,6 @@ jobs:
        resource-group: ${{ env.RESOURCE_GROUP }}
        action: deploy
        # private-cluster: true
-       namespace: demo
        manifests: |
          demo/test.yaml
 
