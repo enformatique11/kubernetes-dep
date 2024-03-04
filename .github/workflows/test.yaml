@@ -54,6 +54,6 @@ jobs:
        # private-cluster: true
        namespace: demo
        manifests: |
-         kubectl apply -f test.yaml
+         kubectl apply -f demo/test.yaml
 
     
