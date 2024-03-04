@@ -46,4 +46,11 @@ jobs:
         admin: 'false'
         use-kubelogin: 'true'   
 
+    - name: Deploys application
+      uses: Azure/k8s-deploy@v4
+      with:
+        action: deploy
+        manifests: |
+          kubectl create namespace demos
+
     
