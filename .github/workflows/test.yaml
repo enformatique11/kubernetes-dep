@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       CLUSTER_NAME: cluster-1
-      RESOURSE_GROUP: cluster-1
+      RESOURCE_GROUP: cluster-1
     steps:
     - name: Git Checkout
       uses: actions/checkout@v2
